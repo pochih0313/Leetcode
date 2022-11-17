@@ -7,8 +7,7 @@ Insert `newInterval` into `intervals` such that `intervals` is still sorte
 
 Return `intervals` *after the insertion*.
 
-## Solution
-### Original
+## Using New Vector Space
 - Time Complexity = O(n)
 - Space Complexity = O(n)
     
@@ -75,11 +74,11 @@ public:
 ```
     
 ### Optimal (cleaner)
-- 將interval重新放到new_intervals裡，考慮三個條件:
-    - 當前interval的尾小於newInterval: 表示直接丟進new_intervals
-    - 當前interval的頭大於newInterval: 表示丟newInterval，並把當前interval當為下一個要丟的newInterval
-    - 若不符合上述兩種情況，表示出現overlap，這時只要將兩個interval做合併作為下一個要丟的newInterval，表示捨棄掉當前interval (已經合併)
-- 最後把剩下的一個newInterval丟到new_intervals裡就完成
+- Put all intervals in intervals & newInterval into new_intervals, considering 3 conditions:
+    - the tail of the current interval < the head of newInterval: put interval into new_intervals.
+    - the head of the current interval > the tail of newInterval: put newInterval into new_intervals, and then set the current interval as the new newInterval.
+    - Otherwise, they are overlapped. So merge them and set as the new newInterval.
+- Finally, Put the last newInterval into new_intervals.
     
 ```cpp
 class Solution {
@@ -111,7 +110,7 @@ public:
 };
 ```
     
-### Constant Space Complexity
+## Constant Space Complexity
 - Time Complexity = O(n)
 - **Space Complexity = O(1)**
     
@@ -144,5 +143,5 @@ public:
 };
 ``` 
 
-### Most Elegant
+## Most Elegant
 https://leetcode.com/problems/insert-interval/discuss/21599/Elegant-C%2B%2B-STL-solution-using-%22equal_range%22-to-find-overlapped-intervals
