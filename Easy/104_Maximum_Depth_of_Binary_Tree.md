@@ -23,27 +23,25 @@ A binary tree's maximum depth is the number of nodes along the longest path from
  */
 class Solution {
 public:
+    void traverse(TreeNode* root, int& max_depth, int depth) {
+        if (!root) return;
+        
+        max_depth = max(max_depth, depth);
+        
+        traverse(root->left, max_depth, depth+1);
+        traverse(root->right, max_depth, depth+1);
+    }
+    
     int maxDepth(TreeNode* root) {
-        if (!root) return 0;
-        
         int max_depth = 0;
-        queue<TreeNode*> q({root});
         
-        while(!q.empty()) {
-            max_depth++;
-            
-            for (int i = q.size(); i > 0; i--) {
-                TreeNode *node = q.front();
-                if (node->left) q.push(node->left);
-                if (node->right) q.push(node->right);
-                q.pop();
-            }
-        }
+        traverse(root, max_depth, 1);
         
         return max_depth;
     }
 };
 ```
+
 ### Optimal
 ```cpp
 class Solution {
