@@ -10,7 +10,7 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 ## Double Pointers
 - Iterate the string and move the two pointer, if the 2 characters are alnumeric, make them lowercase and compare with each other. If 2 characters are different, return false. When the iteration finished, return true.
   
-```
+```cpp
 class Solution {
 public:
     bool isPalindrome(string s) {

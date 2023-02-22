@@ -11,7 +11,7 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 - when we need to consider the iterated element, we can use this technique.
 - iterate the array, update the minimum price, and then calculate the profit and update the maximum profit.
   
-```
+```cpp
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {

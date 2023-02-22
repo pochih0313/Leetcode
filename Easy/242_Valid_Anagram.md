@@ -9,7 +9,7 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 - Time: O(n)
 - Space: O(1)
 
-```
+```cpp
 class Solution {
 public:
     bool isAnagram(string s, string t) {
@@ -31,7 +31,7 @@ public:
 ```
 
 ### Optimal
-```
+```cpp
 class Solution {
 public:
     bool isAnagram(string s, string t) {

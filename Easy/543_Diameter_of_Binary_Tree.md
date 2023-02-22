@@ -8,10 +8,10 @@ The diameter of a binary tree is the length of the longest path between any two 
 The length of a path between two nodes is represented by the number of edges between them.
 
 ## DFS
-* Use depth first searching (DFS) to get the height of every node, and then compare the maximum length (the height of the left tree + the height of the right tree) when backtracking.
+- Use depth first searching (DFS) to get the height of every node, and then compare the maximum length (the height of the left tree + the height of the right tree) when backtracking.
 
-* Time Complexity: O(n)
-* Space Complexity: O(logn)
+- Time Complexity: O(n)
+- Space Complexity: O(logn)
 
 ```cpp
 /**

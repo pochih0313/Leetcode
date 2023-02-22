@@ -7,7 +7,7 @@ Given the root of a binary tree, invert the tree, and return its root.
 - Time: O(n)
 - Space: O(logn)
 
-```
+```cpp
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
